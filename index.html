@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Jak Travel</title>
+
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="icon" href="./assets/favicon.png" type="image/png" />
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.js"
+      integrity="sha512-24XP4a9KVoIinPFUbcnjIjAjtS59PUoxQj3GNVpWc86bCqPuy3YxAcxJrxFCxXe4GHtAumCbO2Ze2bddtuxaRw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <div class="logo">
+            <img src="img/logo-jak-travel.png" alt="logo" width="800" height="70" />
+          </div>
+          <button class="menu-button" id="menu-button" onclick="toggleMenuButton()">
+            <i data-feather="menu"></i>
+          </button>
+          <!-- <ul class="navigation-list" id="menu-list">
+            <li><a href="#hero" onclick="setTitle(this)">Home</a></li>
+            <li><a href="#our-package" onclick="setTitle(this)">Our Package</a></li>
+            <li><a href="#call-us" onclick="setTitle(this)">Call Us</a></li>
+          </ul> -->
+          <ul class="navigation-list" id="menu-list">
+            <li>
+              <div class="nav-box">
+                <a href="#hero" onclick="setTitle(this)">Home</a>
+              </div>
+            </li>
+            <li>
+              <div class="nav-box">
+                <a href="#our-package" onclick="setTitle(this)">Our Package</a>
+              </div>
+            </li>
+            <li>
+              <div class="nav-box">
+                <a href="#call-us" onclick="setTitle(this)">Call Us</a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="main-content">
+      <div class="hero" id="hero">
+        <div class="hero-slider" id="hero-slider">
+          <img id="slide1" src="img/slide1.jpg" alt="" />
+          <img id="slide2" src="img/slide2.jpg" alt="" />
+          <img id="slide3" src="img/slide3.jpg" alt="" />
+        </div>
+        <div class="hero-wrapper">
+          <h1 class="main-title">Your Trusted Travel Agent</h1>
+          <p class="hero-description">Your happiness is our happiness</p>
+        </div>
+      </div>
+      <div class="container">
+        <div class="about-contact" id="about">
+          <div class="about">
+            <img src="img/photo1.jpg" alt="A beach in Bali during dusk, with some peoples playing" class="about-img" />
+            <p class="about-caption">"Liburan jadi menyenangkan bersama Jak Travel Man"</p>
+            <div class="about-author">
+              <img src="img/kante.png" alt="" class="author-img" />
+              <div class="author-data">
+                <div class="author-name">Kante Smile</div>
+                <div class="author-info">Web Developer, 31</div>
+              </div>
+            </div>
+            <hr class="border" />
+            <div class="feature">
+              <h2 class="subsection-title">Mengapa Harus Menggunakan Jak Travel Man?</h2>
+              <div class="feature-list">
+                <div class="feature-item">
+                  <div class="feature-icon">
+                    <i data-feather="arrow-right-circle"></i>
+                  </div>
+                  <div class="feature-description">
+                    Kemudahan dalam merencanakan perjalanan: Dengan menggunakan jasa travel, Anda dapat dengan mudah merencanakan perjalanan Anda, mulai dari memilih destinasi yang ingin dikunjungi hingga memilih jadwal perjalanan yang
+                    sesuai dengan keinginan Anda. Anda dapat memilih paket wisata yang disediakan oleh jasa travel atau membuat rencana perjalanan Anda sendiri dan meminta bantuan dari agen perjalanan.
+                  </div>
+                </div>
+                <div class="feature-item">
+                  <div class="feature-icon">
+                    <i data-feather="arrow-right-circle"></i>
+                  </div>
+                  <div class="feature-description">
+                    Kemudahan dalam transportasi: Jasa travel menyediakan transportasi yang nyaman dan aman bagi pelanggan mereka, seperti bus, kereta api, atau pesawat terbang. Selain itu, jasa travel juga menyediakan layanan antar-jemput
+                    dari bandara ke hotel atau sebaliknya, sehingga Anda tidak perlu khawatir mencari transportasi setelah tiba di destinasi.
+                  </div>
+                </div>
+                <div class="feature-item">
+                  <div class="feature-icon">
+                    <i data-feather="arrow-right-circle"></i>
+                  </div>
+                  <div class="feature-description">Dapat memberikan rekomendasi mengenai tempat-tempat wisata yang layak dikunjungi serta mengatur acara atau aktivitas lain yang dapat menambah keseruan perjalanan Anda</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="contact">
+            <h2 class="subsection-title">Contact Us</h2>
+            <p>Sales akan menghubungi Anda 1x24 jam setelah data anda kami terima</p>
+            <form class="contact-form" name="contact-form" onsubmit="return validateForm()">
+              <div class="form-field">
+                <label for="name" class="input-label">Your name:</label>
+                <input type="text" id="name" name="name" class="input-field" placeholder="First name and last name" oninput="fillInput('name')" />
+                <p class="error-msg" id="name-error">Please fill your name</p>
+              </div>
+              <div class="form-field">
+                <label for="email" class="input-label">Email Address:</label>
+                <input type="text" id="email" name="email" class="input-field" placeholder="example@email.com" oninput="fillInput('email')" />
+                <p class="error-msg" id="email-error">Please fill your email with a correct format</p>
+              </div>
+              <div class="form-field">
+                <label for="interest" class="input-label">What are you interested in?</label>
+                <select id="interest" name="interest" class="input-field" oninput="selectInterest()">
+                  <option value="none" selected disabled>Select option</option>
+                  <option value="option 1">Wisata Alam</option>
+                  <option value="option 2">Wisata Relegi</option>
+                  <option value="option 3">Wisata Kuliner</option>
+                </select>
+                <p class="error-msg" id="interest-error">Please select one interest</p>
+              </div>
+              <button type="submit" class="button">Send</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="package" id="our-package">
+        <div class="package-banner">
+          <div class="container">
+            <h2 class="section-title">Our Packages</h2>
+          </div>
+        </div>
+        <div class="container">
+          <div class="package-list">
+            <div class="package-item">
+              <div class="package-icon">
+                <i data-feather="map-pin"></i>
+              </div>
+              <div class="package-content">
+                <h3>Sabang</h3>
+                <p>Kunjungi cagar budaya, kuliner, pantai, dan tempat wisata yang menarik lainnya di Sabang</p>
+              </div>
+            </div>
+            <div class="package-item">
+              <div class="package-icon">
+                <i data-feather="map-pin"></i>
+              </div>
+              <div class="package-content">
+                <h3>Banda Aceh</h3>
+                <p>Kunjungi cagar alam buaya, kuliner, pantai, dan tempat wisata yang menarik lainnya di Banda Aceh</p>
+              </div>
+            </div>
+            <div class="package-item">
+              <div class="package-icon">
+                <i data-feather="map-pin"></i>
+              </div>
+              <div class="package-content">
+                <h3>Aceh Besar</h3>
+                <p>Kunjungi cagar budaya, bangunan bersejarah, dan tempat wisata yang menarik lainnya di Aceh Besar</p>
+              </div>
+            </div>
+          </div>
+          <hr class="border" />
+          <div class="package-list">
+            <div class="package-item">
+              <div class="package-icon">
+                <i data-feather="star"></i>
+              </div>
+              <div class="package-content">
+                <h3>Wisata Alam</h3>
+                <p>Nikmati Keindahan Alam Pantai dan Gunung</p>
+              </div>
+            </div>
+            <div class="package-item">
+              <div class="package-icon">
+                <i data-feather="star"></i>
+              </div>
+              <div class="package-content">
+                <h3>Wisata Relegi</h3>
+                <p>Kunjugi Tempat Ibadah yang bersejarah</p>
+              </div>
+            </div>
+            <div class="package-item">
+              <div class="package-icon">
+                <i data-feather="star"></i>
+              </div>
+              <div class="package-content">
+                <h3>Wisata Kuliner</h3>
+                <p>Nikmati Nikmatnya Kuliner Makanan maupun minuman</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cta" id="call-us">
+        <div class="container">
+          <h2 class="section-title">Booking Sekarang</h2>
+          <p>Percayakan Perjalanan Wisata Anda Kepada Kami Dengan Harga Terbaik</p>
+          <button class="button">Kontak Kami</button>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="logo">
+          <img src="img/logo-jak-travel.png" alt="tritravel logo" width="192" />
+        </div>
+        <ul class="footer-navigation">
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+        <div>© 2023 Jak Travel Man</div>
+      </div>
+    </footer>
+
+    <script>
+      feather.replace();
+    </script>
+
+    <script src="js/script.js"></script>
+    <script src="js/slideShow.js"></script>
+  </body>
+</html>
